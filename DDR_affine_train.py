@@ -30,13 +30,13 @@ best_val = 1000
 lambda_mse =1.0
 lambda_cc  =10.0
 
-device = "cpu"#torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 m_checkpoint = True
 testing = True
 save_rot_matrices = True 
 
-Num_Epochs = 2
+Num_Epochs = 100
 
 ############################
 ### Set your directories ###
