@@ -96,7 +96,7 @@ print('DDR Settings: L_R = {}, Reg = {}, data ico = {}, cont ico = {}, lab ico =
 ## define datasets ## 
  
 train_dataset = MRIImages(moving_dir,target_dir,moving_suffix,target_prefix,target_suffix,
-                          Id_file1=Id_file_t1)#, Id_file2=Id_file_t2, Id_file3=Id_file_t3)
+                          Id_file1=Id_file_t1, Id_file2=Id_file_t2, Id_file3=Id_file_t3)
 
 val_dataset = MRIImages(moving_dir,target_dir,moving_suffix, target_prefix,target_suffix,
                         Id_file1=Id_file_val)
