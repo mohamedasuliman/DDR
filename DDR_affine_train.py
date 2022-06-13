@@ -51,11 +51,11 @@ target_dir = 'target_images/'  # target imgs location
 
 # moving imgs Ids 
 Id_file_t1 = 'DDR_files/Subjects_IDs/Subjects_ID_1'
-Id_file_t2 = 'DDR_files/Subjects_IDs/Subjects_ID_1'
-Id_file_t3 = 'DDR_files/Subjects_IDs/Subjects_ID_1'
+Id_file_t2 = 'DDR_files/Subjects_IDs/Subjects_ID_2'
+Id_file_t3 = 'DDR_files/Subjects_IDs/Subjects_ID_3'
  
-Id_file_val = 'DDR_files/Subjects_IDs/Subjects_ID_1'
-Id_file_test = 'DDR_files/Subjects_IDs/Subjects_ID_1' # if testing == True
+Id_file_val = 'DDR_files/Subjects_IDs/Subjects_ID_val'
+Id_file_test = 'DDR_files/Subjects_IDs/Subjects_ID_test' # if testing == True
 
 moving_suffix = '.L.sulc.ico6.shape.gii'  # names without the Id number
 target_prefix = 'MSMSulc'
