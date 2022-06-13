@@ -1,2 +1,2 @@
 # DDR
-This repository contains code for deep-discrete learning framework for spherical surface registration
+This repository contains the code for deep-discrete learning framework for spherical surface registration
