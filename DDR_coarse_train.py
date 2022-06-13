@@ -34,7 +34,7 @@ lambda_cc  = 1.0
 lambda_reg = 0.5
 
 loss_pen ='l1'
-device = 'cpu'#torch.device("cuda" if torch.cuda.is_available() else "cpu")#'cpu'#
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")#'cpu'#
 
 best_val = 1000
 print_step = 1
@@ -42,9 +42,9 @@ print_step = 1
 m_checkpoint=True
 testing = True
 testing_best = True
-save_def_gifti = True #False
+save_def_gifti = True 
 
-Num_Epochs = 2
+Num_Epochs = 100
 
 ############################
 ### Set your directories ###
@@ -63,8 +63,8 @@ ddr_files_dir = 'DDR_files/'  # DDR files directory
 Id_file_t1 = ddr_files_dir+'Subjects_IDs/Subjects_ID_1'
 Id_file_t2 = ddr_files_dir+'Subjects_IDs/Subjects_ID_2'
 Id_file_t3 = ddr_files_dir+'Subjects_IDs/Subjects_ID_3' 
-Id_file_val  = ddr_files_dir+'Subjects_IDs/Subjects_ID_1'
-Id_file_test = ddr_files_dir+'Subjects_IDs/Subjects_ID_1' # if testing == True
+Id_file_val  = ddr_files_dir+'Subjects_IDs/Subjects_ID_val'
+Id_file_test = ddr_files_dir+'Subjects_IDs/Subjects_ID_test' # if testing == True
 
 moving_suffix = '.L.sulc.affine.ico6.shape.gii' # names without the Id number
 target_prefix = 'MSMSulc'
