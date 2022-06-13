@@ -34,7 +34,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 m_checkpoint = True
 testing = True
-save_rot_matrices = True 
+save_rot_matrices = True
+print_step = 1
 
 Num_Epochs = 100
 
@@ -93,7 +94,7 @@ train_dataset = MRIImages(moving_dir,
                           moving_suffix,
                           target_prefix,
                           target_suffix,
-                          Id_file1=Id_file_t1)#, Id_file2=Id_file_t2, Id_file3=Id_file_t3)
+                          Id_file1=Id_file_t1, Id_file2=Id_file_t2, Id_file3=Id_file_t3)
 
 val_dataset = MRIImages(moving_dir, 
                         target_dir, 
@@ -203,7 +204,7 @@ for epoch in range(Num_Epochs):
     val_loss, val_loss_mse,val_loss_cc = DDR_validation(val_dataloader, edge_in)
     val_loss_mean[epoch] = torch.mean(val_loss, axis=0)
     
-    if (epoch+1)%1 ==0:
+    if (epoch+1)%print_step ==0:
         print_during_training(epoch,train_loss_sum,train_loss_mse,train_loss_cc,
                               val_loss_mean,val_loss_mse,val_loss_cc)
     
