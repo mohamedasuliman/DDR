@@ -78,7 +78,7 @@ class STN(nn.Module):
         
         self.num_labels = num_labels
                         
-        indices_matrix = torch.load('neigh_ver/indices_'+str(control_ico)+'_'+str(labels_ico))
+        indices_matrix = torch.load('neigh_ver/indices_'+str(control_ico)+'_'+str(labels_ico)+'.pt')
         
         indices_neigh = indices_matrix[:,0:self.num_labels]
         
@@ -165,7 +165,7 @@ class CrfRnn(nn.Module):
         
         self.device = device
         self.num_iter = num_iter        
-        self.gamma = 0.5
+        self.gamma = 0.4
         
         self.filter_weights = nn.Parameter(1.0*torch.ones(control_ver, control_ver))
                 
