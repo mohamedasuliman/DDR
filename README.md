@@ -14,12 +14,14 @@ The data used for the image registration task comes from the [HCP dataset](https
 
 ## Code Usage
 
-To run the affine registration code, run:
+## Training
+
+To train the affine registration network, run:
 ```
 DDR_affine_train.py
 ```
 
-To run the first stage of the non-linear registration, run:
+To train the first stage of the non-linear registration network, run:
 
 ```
 DDR_coarse_train.py
