@@ -27,7 +27,7 @@ num_feat= [32,64,128,256,512]
 data_ico =6           # input data ico
 labels_ico_coar =6    # Labels ico level
 control_ico_coar=2    # Control ico level
-num_labels_coar = 100 # 80 if very detailed
+num_labels_coar = 100 
 
 lambda_mse = 1.0
 lambda_cc  = 1.0
