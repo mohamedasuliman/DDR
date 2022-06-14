@@ -78,7 +78,11 @@ class STN(nn.Module):
         
         self.num_labels = num_labels
                         
-        indices_matrix = torch.load('neigh_ver/indices_'+str(control_ico)+'_'+str(labels_ico)+'.pt')
+        if control_ico>=4 or labels_ico>=7:
+            indices_matrix = torch.load('neigh_ver/indices_red_'+str(control_ico)+'_'+str(labels_ico)+'.pt')
+        else:
+            indices_matrix = torch.load('neigh_ver/indices_'+str(control_ico)+'_'+str(labels_ico)+'.pt')
+                
         
         indices_neigh = indices_matrix[:,0:self.num_labels]
         
